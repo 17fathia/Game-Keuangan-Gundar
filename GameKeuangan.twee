@@ -1,0 +1,174 @@
+:: StoryTitle
+keuangan
+
+
+:: StoryData
+{
+  "ifid": "6B836EDD-F6DD-45E3-ABE9-DCEFEB64837E",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Menu",
+  "zoom": 1
+}
+
+
+:: Akhir {"position":"1312.5,400","size":"100,100"}
+\:: Akhir
+Sisa uangmu di akhir bulan: Rp$uang
+
+(if: $uang >= 500000)[
+ 🎉 Kamu hebat! Masih punya sisa tabungan yang sehat, pertahankan wahai anak muda!
+]
+(else-if: $uang >= 100000)[
+ 😌 Kamu berhasil bertahan, tapi hampir habis. Hampir sekarat kamu, tapi kamu selamat!
+]
+(else:)[
+ ⚠️ Waduh, uangmu habis! Bulan depan harus lebih hati-hati ya.
+]
+
+[[Main ulang->Main ulang?]]
+
+
+:: Angkot {"position":"562.5,400","size":"100,100"}
+\:: Angkot
+(set: $uang to $uang - 120000)
+
+Pilihan ekonomis, bakal banyak jalan kaki dan lebih sehat 👣
+Cocok banget nih buat kamu yang lagi ngejar seribu langkah itu!🫵
+Tapi semangat panas-panasan, jadi bau asep dan bau rokok😔
+Sisa uang: Rp$uang
+
+[[Lanjut ke weekend->Weekend]]
+
+
+:: BelajarKosan {"position":"1187.5,400","size":"100,100"}
+\:: BelajarKosan
+
+Kamu belajar dan gak keluar uang. Mantap, pertahankan ambismu wahai anak muda💪
+Walaupun kutahu kamu ujung-ujungnya bakal rebahan doang dan scroll tiktok😝🤳
+Sisa uang: Rp$uang
+
+[[Lihat hasil akhir->Akhir]]
+
+
+:: Campuran {"position":"687.5,400","size":"100,100"}
+\:: Campuran
+(set: $uang to $uang - 250000)
+
+Kamu pintar menyesuaikan cuaca dan kondisi. #frugalliving #kaummendangmending #inigayaguemanagayalo ᯓ🏃🏻‍♀️‍➡️
+Sisa uang: Rp$uang
+
+[[Lanjut ke weekend->Weekend]]
+
+
+:: Main ulang? {"position":"1437.5,400","size":"100,100"}
+[[Menu]]
+
+
+:: Menu {"position":"575,175","size":"200,200"}
+\:: Start 🚩
+(set: $uang to 2000000)
+
+Selamat datang, om swiastu, salam kebajikan.
+
+Ini adalah game tentang gimana kamu, sebagai mahasiswa mengelola keuangan kamu. Kira-kira apakah kamu jago buat ngelola uang atau engga? Mari kita tes! 🧐
+
+🎯Nah, kamu punya uang bulanan Rp2.000.000. Tugasmu adalah kamu harus ambil keputusan yang bijak biar uangmu cukup sampai akhir bulan dan selamat untuk hidup di hari esok.
+
+\:: Ngopi ☕🤎🥯🍪
+Saat minggu pertama, temanmu ngajak ngopi fancy 3x seminggu. Sekali ngopi harganya Rp50.000.
+
+Apa yang kamu lakukan?
+
+[[Ngopi terus (Rp150.000)->NgopiFancy]]
+[[Ngopi 1x aja (Rp50.000)->NgopiHemat]]
+[[Kopi sendiri aja (Rp10.000)->NgopiSendiri]]
+
+
+:: NgopiFancy {"position":"0,400","size":"100,100"}
+\:: NgopiFancy☕🤎🥯🍪
+
+(set: $uang to $uang - 150000)
+
+Kamu ngopi fancy tiap minggu di kafe hits daerah jaksel 😎☕
+Sisa uangmu sekarang: Rp$uang
+
+[[Lanjut ke transportasi->Transport]]
+
+
+:: NgopiHemat {"position":"62.5,400","size":"100,100"}
+\:: NgopiHemat ⋆☕︎ ˖
+
+(set: $uang to $uang - 50000)
+
+Kamu tetap ngopi tapi lebih hemat, biasanya pake starling atau kopi gerobak☕️
+Sisa uangmu sekarang: Rp$uang
+
+[[Lanjut ke transportasi->Transport]]
+
+
+:: NgopiSendiri {"position":"187.5,400","size":"100,100"}
+\:: NgopiSendiri☕
+
+(set: $uang to $uang - 10000)
+
+Kamu hemat maksimal. Mantap! Kopi sachet luwak white coffee emang nyaman di lambung!
+Sisa uangmu sekarang: Rp$uang
+
+[[Lanjut ke transportasi->Transport]]
+
+
+:: NobarMie {"position":"1062.5,400","size":"100,100"}
+\:: NobarMie
+(set: $uang to $uang - 30000)
+
+Nonton bareng temen + makan mie gacoan. Hemat tapi tetap seru!
+Tapi kepedesan🌶️
+#cintamiepedasnomorsatudiindo #gacoanlevel1aja #ujangkedu
+Sisa uang: Rp$uang
+
+[[Lihat hasil akhir->Akhir]]
+
+
+:: NontonMakan {"position":"937.5,400","size":"100,100"}
+\:: NontonMakan
+(set: $uang to $uang - 150000)
+
+Makan enak, nonton film favorit = hati senang 😄
+Tapi... boros...
+
+Sisa uang: Rp$uang
+
+[[Lihat hasil akhir->Akhir]]
+
+
+:: Ojek {"position":"437.5,400","size":"100,100"}
+\:: Ojek
+(set: $uang to $uang - 400000)
+
+Cepat dan nyaman, kayak dibonceng si dia yang cuma hts itu. Tapi ya... boros. hehe. 🛵
+Sisa uang: Rp$uang
+
+[[Lanjut ke weekend->Weekend]]
+
+
+:: Transport {"position":"312.5,400","size":"100,100"}
+\:: Transport🚦 .ೃ࿔ ✈︎ *:･
+
+WADUH! Kamu perlu ke kampus 20x sebulan untuk hadir di kelas dan menjadi anak yang rajin.
+
+Pilih transportasi utamamu:
+
+[[Ojek online (Rp400.000)->Ojek]]
+[[Angkot/jalan kaki (Rp120.000)->Angkot]]
+[[Campuran (Rp250.000)->Campuran]]
+
+
+:: Weekend {"position":"812.5,400","size":"100,100"}
+\:: Weekend
+
+Akhir pekan datang, terus kamu butuh refreshing dan me-time. Hayo kamu pilih apa?
+
+[[Nonton + makan luar (Rp150.000)->NontonMakan]]
+[[Mie + nobar kosan (Rp30.000)->NobarMie]]
+[[Belajar di kosan (Rp0)->BelajarKosan]]
